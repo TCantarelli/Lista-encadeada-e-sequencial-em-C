@@ -4,6 +4,7 @@ void addFinalEncadeada(ListaEncadeada* lista, char new_name[], int new_rg, int* 
     *cn = 0;
     *mn = 0;
 
+
     No* novo_no = (No*)malloc(sizeof(No));
     (*mn)++;
 

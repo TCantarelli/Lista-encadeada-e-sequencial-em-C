@@ -27,6 +27,7 @@ typedef struct {
     int rg;
 }Dados;
 
+
 void readFile(char fileName[], ListaEncadeada* lista);
 void imprimir(ListaEncadeada* lista);
 void readFileSequencial(char nomeArquivo[],Dados** dados, int* tam);

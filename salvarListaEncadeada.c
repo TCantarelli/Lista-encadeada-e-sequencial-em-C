@@ -15,4 +15,5 @@ void salvarListaEncadeada(ListaEncadeada* lista, char nomeArquivo[]) {
 
     fclose(arquivo);
     printf("Lista encadeada salva com sucesso em %s!\n", nomeArquivo);
+
 }

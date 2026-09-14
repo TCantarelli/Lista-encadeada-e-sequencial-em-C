@@ -28,6 +28,7 @@ void readFileSequencial(char nomeArquivo[], Dados** dados, int* tam) {
             mn++;
         }
     }
+
     rewind(arquivo);
     mn++;
 

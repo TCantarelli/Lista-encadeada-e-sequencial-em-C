@@ -4,6 +4,7 @@ void pesquisaSimples(Dados* dados, int rg_desejado, int tam, int* cn, int* mn)
 {
     *cn = 0;
     *mn = 0;
+
     bool encontrado = false;
 
     for (int i = 0; i < tam; i++) {

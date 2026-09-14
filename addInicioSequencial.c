@@ -7,6 +7,7 @@ void addInicioSequencial(Dados** dados, int* tam, char new_name[], int new_rg, i
     Dados* temp = (Dados*) realloc(*dados, (*tam + 1) * sizeof(Dados));
     (*mn)++;
 
+
     (*cn)++;
     if (temp == NULL) {
         printf("Memoria Insuficiente!\n");

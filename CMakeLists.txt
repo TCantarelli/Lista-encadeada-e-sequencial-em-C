@@ -3,6 +3,7 @@ project(ED1 C)
 
 set(CMAKE_C_STANDARD 23)
 
+
 add_executable(ED1 main.c
         readFile.c
         declarations.h

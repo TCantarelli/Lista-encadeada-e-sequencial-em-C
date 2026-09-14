@@ -26,6 +26,7 @@ void readFile(char fileName[], ListaEncadeada* lista) {
             total_mn += mn_item;
         }
         else if (res == 1) {
+
             int rg_padrao = 0; // Valor padrão para RG indefinido
             addFinalEncadeada(lista, new_name, rg_padrao, &cn_item, &mn_item);
             total_cn += cn_item;

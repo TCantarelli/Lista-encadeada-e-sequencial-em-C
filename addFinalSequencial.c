@@ -7,6 +7,7 @@ void addFinalSequencial(Dados** dados, int* tam, char new_name[], int new_rg, in
     Dados* temp = (Dados*) realloc(*dados, (*tam + 1) * sizeof(Dados));
     (*mn)++;
 
+
     (*cn)++;
     if (temp == NULL) {
         printf("Memoria insuficiente!\n");

@@ -7,6 +7,7 @@ void addMeioSequencial(Dados** dados, int* tam, char new_name[], int new_rg, int
     pos--;
     (*mn)++;
 
+
     (*cn += 2);
     if (pos < 0 || pos > *tam) {
         printf("Posicao Invalida!\n");

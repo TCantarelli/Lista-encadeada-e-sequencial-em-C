@@ -24,4 +24,5 @@ void showMenuPrimary() {
     printf("20-Salvar lista encadeada em arquivo\n");
     printf("21-Salvar lista sequencial em arquivo\n");
     printf("167-Sair\n");
+
 }

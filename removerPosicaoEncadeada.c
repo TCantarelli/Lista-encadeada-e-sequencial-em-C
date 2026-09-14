@@ -13,6 +13,7 @@ void removerPosicaoEncadeada(ListaEncadeada* lista, int pos, int* cn, int* mn) {
     (*mn)++;
 
     (*cn)++;
+
     if (pos == 1) {
         noParaRemover = lista->inicio;
         lista->inicio = lista->inicio->prox;

@@ -7,6 +7,7 @@ void addInicioEncadeada(ListaEncadeada* lista, char new_name[], int new_rg, int*
     No* novo_no = (No*) malloc(sizeof(No));
     (*mn)++;
 
+
     (*cn)++;
     if (novo_no == NULL) {
         printf("Memoria insuficiente!\n");

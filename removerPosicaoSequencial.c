@@ -1,6 +1,7 @@
 #include "declarations.h"
 
 void removerPosicaoSequencial(Dados** dados, int *tam, int pos, int* cn, int* mn) {
+
     *cn = 0;
     *mn = 0;
 

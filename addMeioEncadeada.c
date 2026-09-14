@@ -19,6 +19,7 @@ void addMeioEncadeada(ListaEncadeada* lista, char new_name[], int new_rg, int po
     No* atual = lista->inicio;
     (*mn)++;
 
+
     for (int i = 1; i < pos - 1; i++) {
         (*cn += 2);
         atual = atual->prox;

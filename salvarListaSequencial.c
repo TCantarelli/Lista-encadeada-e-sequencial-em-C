@@ -13,4 +13,5 @@ void salvarListaSequencial(Dados* dados, int tam, char nomeArquivo[]) {
 
     fclose(arquivo);
     printf("Lista sequencial salva com sucesso em %s!\n", nomeArquivo);
+
 }
