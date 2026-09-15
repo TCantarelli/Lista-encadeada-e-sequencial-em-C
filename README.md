@@ -20,8 +20,5 @@ Trabalho feito para a matéria de Estrutura de Dados 1
 - C
 - CMake
 
-## Como executar
+## Comparação de complexidade Incluída
 
-## Comparação de complexidade
-
-## Estrutura do projeto
