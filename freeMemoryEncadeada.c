@@ -15,5 +15,7 @@ void liberarListaEncadeada(ListaEncadeada* lista) {
     }
 
     lista->inicio = NULL;
+    lista->fim = NULL;
+    lista->tamanho = 0;
     printf("Lista encadeada Liberada com exito!\n");
 }

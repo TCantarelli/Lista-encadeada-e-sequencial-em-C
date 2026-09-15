@@ -515,7 +515,6 @@ int main () {
             case 22: {
                 liberarListaEncadeada(&listaEnc);
                 listaEnc.fim = NULL;
-                listaEnc.inicio = NULL;
                 listaEnc.tamanho = 0;
                 if (dados != NULL) {
                     free(dados);
