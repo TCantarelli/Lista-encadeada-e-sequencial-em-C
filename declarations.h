@@ -49,4 +49,6 @@ void removerPosicaoSequencial(Dados** dados, int *tam, int pos, int* cn, int* mn
 void salvarListaEncadeada(ListaEncadeada* lista, char nomeArquivo[]);
 void salvarListaSequencial(Dados* dados, int tam, char nomeArquivo[]);
 
+void liberarListaEncadeada(ListaEncadeada* lista);
+
 #endif

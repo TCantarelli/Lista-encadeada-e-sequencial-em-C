@@ -22,4 +22,6 @@ add_executable(ED1 main.c
         removerPosicaoEncadeada.c
         "removerPosicaoSequencial.c"
         salvarListaEncadeada.c
-        salvarListaSequencial.c)
+        salvarListaSequencial.c
+        freeMemoryEncadeada.c
+)

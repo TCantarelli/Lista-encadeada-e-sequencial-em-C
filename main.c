@@ -512,6 +512,19 @@ int main () {
                 salvarListaSequencial(dados, tam, nomeArq);
                 break;
             }
+            case 22: {
+                liberarListaEncadeada(&listaEnc);
+                listaEnc.fim = NULL;
+                listaEnc.inicio = NULL;
+                listaEnc.tamanho = 0;
+                if (dados != NULL) {
+                    free(dados);
+                    tam = 0;
+                    dados = NULL;
+                }
+                if (dados == NULL)
+                    printf("Lista Sequencial Liberada com exito!");
+            }break;
             case 167: {
                 continuar = false;
             }
@@ -522,5 +535,9 @@ int main () {
         }
     }
     printf("\nBy Cantarelli");
+    liberarListaEncadeada(&listaEnc);
+    if (dados != NULL)
+        free(dados);
+
     return 0;
 }
