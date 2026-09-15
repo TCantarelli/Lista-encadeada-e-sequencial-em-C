@@ -24,6 +24,7 @@ int main () {
                 showMenuFile();
 
                 scanf("%d", &arquivoDesejado);
+                while (getchar() != '\n');
 
                 switch (arquivoDesejado){
                     case 1: readFile("NomeRG10.txt", &listaEnc);
@@ -50,6 +51,7 @@ int main () {
                 showMenuFile();
 
                 scanf("%d", &opcao);
+                while (getchar() != '\n');
                 switch (opcao){
                     case 1: readFileSequencial("NomeRG10.txt", &dados, &tam);
                         break;
@@ -75,7 +77,13 @@ int main () {
 
                 printf("Digite o RG que deseja procurar OBS: APENAS NUMEROS\n");
                 scanf("%d", &rgDesejado);
+                while (getchar() != '\n');
+
+                clock_t inicio = clock();
                 pesquisaEncadeada(&listaEnc, rgDesejado, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }
             break;
             case 4: {
@@ -84,7 +92,13 @@ int main () {
 
                 printf("Digite o RG que deseja buscar: \n");
                 scanf("%d", &rg_desejado);
+                while (getchar() != '\n');
+
+                clock_t inicio = clock();
                 pesquisaSimples(dados, rg_desejado, tam, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }
             break;
             case 5:{
@@ -106,8 +120,14 @@ int main () {
                 while (getchar() != '\n');
 
                 int cn = 0, mn = 0;
+
+                clock_t inicio = clock();
                 addFinalEncadeada(&listaEnc, new_name, new_rg, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
                 printf("Adicionado no final (Encadeada) | C(n): %d | M(n): %d\n", cn, mn);
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }break;
             case 8: {
                 printf("Digite o nome que você quer adicionar:\n");
@@ -120,8 +140,14 @@ int main () {
                 while (getchar() != '\n');
 
                 int cn = 0, mn = 0;
+
+                clock_t inicio = clock();
                 addFinalSequencial(&dados, &tam, new_name, new_rg, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
                 printf("Adicionado no final (Sequencial) | C(n): %d | M(n): %d\n", cn, mn);
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }break;
             case 9: {
                 printf("Digite o nome que você quer adicionar:\n");
@@ -134,8 +160,14 @@ int main () {
                 while (getchar() != '\n');
 
                 int cn = 0, mn = 0;
+
+                clock_t inicio = clock();
                 addInicioEncadeada(&listaEnc, new_name, new_rg, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
                 printf("Adicionado no inicio (Encadeada) | C(n): %d | M(n): %d\n", cn, mn);
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }break;
             case 10: {
                 printf("Digite o nome que você quer adicionar:\n");
@@ -148,8 +180,14 @@ int main () {
                 while (getchar() != '\n');
 
                 int cn = 0, mn = 0;
+
+                clock_t inicio = clock();
                 addInicioSequencial(&dados, &tam, new_name, new_rg, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
                 printf("Adicionado no inicio (Sequencial) | C(n): %d | M(n): %d\n", cn, mn);
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }break;
             case 11: {
                 printf("Digite o nome que você quer adicionar:\n");
@@ -159,14 +197,21 @@ int main () {
                 printf("Agora digite o RG da pessoa %s : ", new_name);
                 int new_rg;
                 scanf("%d", &new_rg);
+                while (getchar() != '\n');
                 int pos;
                 printf("Em qual posicao deseja adicionar esses dados?\n");
                 scanf("%d", &pos);
                 while (getchar() != '\n');
 
                 int cn = 0, mn = 0;
+
+                clock_t inicio = clock();
                 addMeioEncadeada(&listaEnc, new_name, new_rg, pos, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
                 printf("Adicionado na posicao %d (Encadeada) | C(n): %d | M(n): %d\n", pos, cn, mn);
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }break;
             case 12: {
                 printf("Digite o nome que você quer adicionar:\n");
@@ -176,14 +221,21 @@ int main () {
                 printf("Agora digite o RG da pessoa %s : ", new_name);
                 int new_rg;
                 scanf("%d", &new_rg);
+                while (getchar() != '\n');
                 int pos;
                 printf("Em qual posicao deseja adicionar esses dados?\n");
                 scanf("%d", &pos);
                 while (getchar() != '\n');
 
                 int cn = 0, mn = 0;
+
+                clock_t inicio = clock();
                 addMeioSequencial(&dados, &tam, new_name, new_rg, pos, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
                 printf("Adicionado na posicao %d (Sequencial) | C(n): %d | M(n): %d\n", pos, cn, mn);
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }break;
             case 13: {
                 if (tam == 0) {
@@ -196,8 +248,14 @@ int main () {
                 while (getchar() != '\n');
 
                 int cn = 0, mn = 0;
+
+                clock_t inicio = clock();
                 removerPosicaoSequencial(&dados, &tam, pos, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
                 printf("Removido da posicao %d (Sequencial) | C(n): %d | M(n): %d\n", pos, cn, mn);
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }break;
             case 14: {
                 if (listaEnc.tamanho == 0) {
@@ -210,8 +268,14 @@ int main () {
                 while (getchar() != '\n');
 
                 int cn = 0, mn = 0;
+
+                clock_t inicio = clock();
                 removerPosicaoEncadeada(&listaEnc, pos, &cn, &mn);
+                clock_t fim = clock();
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
                 printf("Removido da posicao %d (Encadeada) | C(n): %d | M(n): %d\n", pos, cn, mn);
+                printf("Tempo de execucao: %.6f segundos\n", tempo);
             }break;
             case 15: {
                 int opcaoArquivo;
@@ -232,8 +296,6 @@ int main () {
                         printf("Opcao invalida!\n");
                         break;
                 }
-
-
 
                 clock_t inicioEnc = clock();
                 readFile(nomeArq, &listaEnc);
@@ -390,6 +452,7 @@ int main () {
                 printf("Digite o RG: ");
                 int rg;
                 scanf("%d", &rg);
+                while (getchar() != '\n');
 
                 int pos;
                 printf("Digite a posicao N desejada: ");
