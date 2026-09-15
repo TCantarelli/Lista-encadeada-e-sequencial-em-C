@@ -233,21 +233,15 @@ int main () {
                         break;
                 }
 
-                ListaEncadeada listaTeste;
-                listaTeste.inicio = NULL;
-                listaTeste.fim = NULL;
-                listaTeste.tamanho = 0;
+
 
                 clock_t inicioEnc = clock();
-                readFile(nomeArq, &listaTeste);
+                readFile(nomeArq, &listaEnc);
                 clock_t fimEnc = clock();
                 double tempoEnc = (double)(fimEnc - inicioEnc) / CLOCKS_PER_SEC;
 
-                Dados* dadosTeste = NULL;
-                int tamTeste = 0;
-
                 clock_t inicioSeq = clock();
-                readFileSequencial(nomeArq, &dadosTeste, &tamTeste);
+                readFileSequencial(nomeArq, &dados, &tam);
                 clock_t fimSeq = clock();
                 double tempoSeq = (double)(fimSeq - inicioSeq) / CLOCKS_PER_SEC;
 
@@ -256,14 +250,12 @@ int main () {
                 printf("Lista Sequencial: %.6f segundos\n", tempoSeq);
 
                 if (tempoEnc < tempoSeq) {
-                    printf("-> A Lista Encadeada foi mais rápida.\n");
+                    printf("-> A Lista Encadeada foi mais rapida.\n");
                 } else if (tempoSeq < tempoEnc) {
-                    printf("-> A Lista Sequencial foi mais rápida.\n");
+                    printf("-> A Lista Sequencial foi mais rapida.\n");
                 } else {
                     printf("-> Ambas levaram o mesmo tempo.\n");
                 }
-
-                free(dadosTeste);
                 break;
             }
             case 16: {
