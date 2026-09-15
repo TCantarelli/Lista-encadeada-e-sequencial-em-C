@@ -18,21 +18,24 @@ void readFile(char fileName[], ListaEncadeada* lista) {
     while (fgets(linha, sizeof(linha), arquivo) != NULL) {
         total_cn++;
         int res = sscanf(linha, " %49[^,],%d", new_name, &new_rg);
-        total_cn += 2;
+        total_cn ++;
 
         if (res == 2) {
             addFinalEncadeada(lista, new_name, new_rg, &cn_item, &mn_item);
             total_cn += cn_item;
             total_mn += mn_item;
         }
-        else if (res == 1) {
-
-            int rg_padrao = 0;
-            addFinalEncadeada(lista, new_name, rg_padrao, &cn_item, &mn_item);
-            total_cn += cn_item;
-            total_mn += mn_item;
+        else{
+            total_cn++;
+            if (res == 1) {
+                int rg_padrao = 0;
+                addFinalEncadeada(lista, new_name, rg_padrao, &cn_item, &mn_item);
+                total_cn += cn_item;
+                total_mn += mn_item;
+            }
         }
     }
+    total_cn++;
     fclose(arquivo);
 
     printf("\nLeitura do arquivo %s concluída (Encadeada)!\n", fileName);

@@ -22,12 +22,14 @@ void readFileSequencial(char nomeArquivo[], Dados** dados, int* tam) {
     while (fgets(linha, sizeof(linha), arquivo) != NULL) {
         cn++;
         int res = sscanf(linha, " %49[^,],%d", new_name, &new_rg);
-        cn += 2;
+
+        cn++;
         if (res >= 1) {
             tam_temp++;
             mn++;
         }
     }
+    cn++;
 
     rewind(arquivo);
     mn++;
@@ -35,8 +37,8 @@ void readFileSequencial(char nomeArquivo[], Dados** dados, int* tam) {
     Dados* temp = (Dados*) malloc(tam_temp * sizeof(Dados));
     mn++;
 
+    cn++;
     if (temp == NULL) {
-        cn++;
         printf("Erro de memoria!\n");
         fclose(arquivo);
         return;
@@ -49,19 +51,25 @@ void readFileSequencial(char nomeArquivo[], Dados** dados, int* tam) {
         cn += 2;
         int res = sscanf(linha, " %49[^,],%d", new_name, &new_rg);
 
+        cn++;
         if (res == 2) {
             strcpy((*dados)[i].name, new_name);
             (*dados)[i].rg = new_rg;
             mn += 2;
             i++;
             mn++;
-        } else if (res == 1) {
-            strcpy((*dados)[i].name, new_name);
-            (*dados)[i].rg = 0;
-            i++;
-            mn++;
+        } else {
+            cn++;
+            if (res == 1) {
+                strcpy((*dados)[i].name, new_name);
+                (*dados)[i].rg = 0;
+                i++;
+                mn++;
+            }
         }
     }
+    cn++;
+
     *tam = i;
     mn++;
     fclose(arquivo);

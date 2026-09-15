@@ -5,8 +5,6 @@ void pesquisaSimples(Dados* dados, int rg_desejado, int tam, int* cn, int* mn)
     *cn = 0;
     *mn = 0;
 
-    bool encontrado = false;
-
     for (int i = 0; i < tam; i++) {
         (*cn)++;
         (*cn)++;
@@ -14,12 +12,11 @@ void pesquisaSimples(Dados* dados, int rg_desejado, int tam, int* cn, int* mn)
         if (dados[i].rg == rg_desejado) {
             printf("RG: %d encontrado na posicao %d!\n", rg_desejado, i+1);
             printf("Nome: %s | RG: %d\n", dados[i].name, dados[i].rg);
-            encontrado = true;
+            printf("Metricas -> C(n): %d | M(n): %d\n", *cn, *mn);
+            return;
         }
     }
-
+    (*cn)++;
     printf("Metricas -> C(n): %d | M(n): %d\n", *cn, *mn);
-    if (!encontrado) {
-        printf("RG: %d não encontrado!\n", rg_desejado);
-    }
+    printf("RG: %d não encontrado!\n", rg_desejado);
 }

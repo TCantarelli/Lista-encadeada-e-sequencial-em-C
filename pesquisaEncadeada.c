@@ -24,7 +24,8 @@ void pesquisaEncadeada(ListaEncadeada* lista, int rg_desejado, int* cn, int* mn)
         (*mn)++;
         pos++;
     }
+    (*cn)++;
 
-    printf("RG %d não encontrado.\n", rg_desejado);
+    printf("RG %d não encontrado!\n", rg_desejado);
     printf("Metricas -> C(n): %d | M(n): %d\n", *cn, *mn);
 }

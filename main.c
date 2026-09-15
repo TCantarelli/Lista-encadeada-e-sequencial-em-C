@@ -68,7 +68,8 @@ int main () {
                         break;
                     case 7: readFileSequencial("NomeRG100M.txt", &dados, &tam);
                         break;
-                    default: printf("Opcao escolhida invalida!\n"); break;
+                    default: printf("Opcao escolhida invalida!\n");
+                        break;
                 }
                 break;
             }

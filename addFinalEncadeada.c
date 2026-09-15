@@ -10,6 +10,7 @@ void addFinalEncadeada(ListaEncadeada* lista, char new_name[], int new_rg, int* 
 
     (*cn)++;
     if (novo_no == NULL) {
+        printf("Erro ao alocar memoria!");
         return;
     }
     novo_no->prox = NULL;
