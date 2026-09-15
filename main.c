@@ -31,7 +31,8 @@ int main () {
                         break;
                     case 2: readFile("NomeRG50.txt", &listaEnc);
                         break;
-                    case 3: readFile("NomeRG100.txt", &listaEnc); break;
+                    case 3: readFile("NomeRG100.txt", &listaEnc);
+                        break;
                     case 4: readFile("NomeRG1K.txt", &listaEnc);
                         break;
                     case 5: readFile("NomeRG10K.txt", &listaEnc);
@@ -285,13 +286,20 @@ int main () {
 
                 char nomeArq[50];
                 switch (opcaoArquivo){
-                    case 1: strcpy(nomeArq, "NomeRG10.txt"); break;
-                    case 2: strcpy(nomeArq, "NomeRG50.txt"); break;
-                    case 3: strcpy(nomeArq, "NomeRG100.txt"); break;
-                    case 4: strcpy(nomeArq, "NomeRG1K.txt"); break;
-                    case 5: strcpy(nomeArq, "NomeRG10K.txt"); break;
-                    case 6: strcpy(nomeArq, "NomeRG1M.txt"); break;
-                    case 7: strcpy(nomeArq, "NomeRG100M.txt"); break;
+                    case 1: strcpy(nomeArq, "NomeRG10.txt");
+                        break;
+                    case 2: strcpy(nomeArq, "NomeRG50.txt");
+                        break;
+                    case 3: strcpy(nomeArq, "NomeRG100.txt");
+                        break;
+                    case 4: strcpy(nomeArq, "NomeRG1K.txt");
+                        break;
+                    case 5: strcpy(nomeArq, "NomeRG10K.txt");
+                        break;
+                    case 6: strcpy(nomeArq, "NomeRG1M.txt");
+                        break;
+                    case 7: strcpy(nomeArq, "NomeRG100M.txt");
+                        break;
                     default:
                         printf("Opcao invalida!\n");
                         break;
