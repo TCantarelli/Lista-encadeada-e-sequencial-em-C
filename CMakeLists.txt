@@ -5,7 +5,7 @@ set(CMAKE_C_STANDARD 23)
 
 
 add_executable(ED1 main.c
-        readFile.c
+        readFileEncadeada.c
         declarations.h
         imprimir.c
         redFileSequencial.c
