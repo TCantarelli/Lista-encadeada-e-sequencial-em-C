@@ -1,7 +1,7 @@
 # Lista Encadeada e Sequencial em C
 
 ## Sobre
-...
+Trabalho feito para a matéria de Estrutura de Dados 1
 
 ## Funcionalidades
 - Inserção no início
