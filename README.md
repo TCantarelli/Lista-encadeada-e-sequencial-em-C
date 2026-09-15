@@ -1,1 +1,27 @@
-Programa feito para ler e manipular listas encadeada e sequencial que retira dados de arquivos e salva nome e RG que tem o formato NOME, RG , trabalho feito para a materia de Estrutura de Dados 1
+# Lista Encadeada e Sequencial em C
+
+## Sobre
+...
+
+## Funcionalidades
+- Inserção no início
+- Inserção no meio
+- Inserção no final
+- Remoção
+- Pesquisa
+- Leitura de arquivos
+- Salvamento
+
+## Estruturas utilizadas
+- Lista sequencial
+- Lista simplesmente encadeada
+
+## Tecnologias
+- C
+- CMake
+
+## Como executar
+
+## Comparação de complexidade
+
+## Estrutura do projeto
