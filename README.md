@@ -11,6 +11,7 @@ Trabalho feito para a matéria de Estrutura de Dados 1
 - Pesquisa
 - Leitura de arquivos
 - Salvamento
+- Ordenação
 
 ## Estruturas utilizadas
 - Lista sequencial
