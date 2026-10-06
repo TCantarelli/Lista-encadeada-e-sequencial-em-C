@@ -533,6 +533,50 @@ int main () {
                 if (dados == NULL)
                     printf("Lista Sequencial Liberada com exito!");
             }break;
+                case 23: {
+                if (listaEnc.tamanho == 0 || tam == 0) {
+                    printf("As listas precisam estar preenchidas para comparar a ordenacao!\n");
+                    break;
+                }
+
+                int cn_enc = 0, mn_enc = 0;
+                clock_t inicio_enc = clock();
+                selectionSortEncadeada(&listaEnc, &cn_enc, &mn_enc);
+                clock_t fim_enc = clock();
+                double tempo_enc = (double)(fim_enc - inicio_enc) / CLOCKS_PER_SEC;
+
+                int cn_seq = 0, mn_seq = 0;
+                clock_t inicio_seq = clock();
+                selectionSortSequencial(dados, tam, &cn_seq, &mn_seq);
+                clock_t fim_seq = clock();
+                double tempo_seq = (double)(fim_seq - inicio_seq) / CLOCKS_PER_SEC;
+
+                printf("\n==================================================\n");
+                printf("       COMPARACAO DE ORDENACAO (Selection Sort)\n");
+                printf("==================================================\n");
+                printf("LISTA ENCADEADA:\n");
+                printf(" - Tempo de Execucao : %.6f segundos\n", tempo_enc);
+                printf(" - Comparacoes C(n)  : %d\n", cn_enc);
+                printf(" - Movimentacoes M(n): %d\n", mn_enc);
+
+                printf("\nLISTA SEQUENCIAL:\n");
+                printf(" - Tempo de Execucao : %.6f segundos\n", tempo_seq);
+                printf(" - Comparacoes C(n)  : %d\n", cn_seq);
+                printf(" - Movimentacoes M(n): %d\n", mn_seq);
+                printf("==================================================\n");
+
+                if (tempo_enc < tempo_seq) {
+                    printf("-> Vencedor em Tempo: Lista Encadeada foi mais rapida na ordenacao.\n");
+                }
+                else if (tempo_seq < tempo_enc) {
+                    printf("-> Vencedor em Tempo: Lista Sequencial foi mais rapida na ordenacao.\n");
+                }
+                else {
+                    printf("-> Empate exato no tempo de execucao.\n");
+                }
+                printf("==================================================\n");
+                break;
+            }
             case 167: {
                 continuar = false;
             }

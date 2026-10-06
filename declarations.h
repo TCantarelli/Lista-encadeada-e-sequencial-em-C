@@ -51,4 +51,7 @@ void salvarListaSequencial(Dados* dados, int tam, char nomeArquivo[]);
 
 void liberarListaEncadeada(ListaEncadeada* lista);
 
+void selectionSortEncadeada(ListaEncadeada* lista, int* cn, int* mn);
+void selectionSortSequencial(Dados* dados, int tam, int* cn, int* mn);
+
 #endif

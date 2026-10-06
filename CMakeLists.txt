@@ -24,4 +24,6 @@ add_executable(ED1 main.c
         salvarListaEncadeada.c
         salvarListaSequencial.c
         freeMemoryEncadeada.c
+        selectionSortSequencial.c
+        selectionSortEncadeada.c
 )
