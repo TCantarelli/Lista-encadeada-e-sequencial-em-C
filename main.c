@@ -577,6 +577,116 @@ int main () {
                 printf("==================================================\n");
                 break;
             }
+            case 24: {
+                if (tam == 0) {
+                    printf("A lista sequencial esta vazia!\n");
+                    break;
+                }
+                int cn, mn;
+                clock_t inicio_seq = clock();
+                insertionSortSequencial(dados, tam, &cn, &mn);
+                clock_t fim_seq = clock();
+                double tempo_seq = (double)(fim_seq - inicio_seq) / CLOCKS_PER_SEC;
+                printf("Tempo de execucao foi de: %.6f\n", tempo_seq);
+                printf("mn: %d cn: %d\n",mn,cn);
+            }break;
+            case 25: {
+                if (tam == 0) {
+                    printf("A lista esta vazia!\n ");
+                    break;
+                }
+                int cn, mn;
+                clock_t inicio_seq = clock();
+                bubbleSortSequencial(dados, tam, &cn, &mn);
+                clock_t fim_seq = clock();
+                double tempo_seq = (double)(fim_seq - inicio_seq) / CLOCKS_PER_SEC;
+                printf("Tempo de execucao foi: %.6f\n", tempo_seq);
+                printf("mn: %d cn: %d\n",mn,cn);
+            }break;
+            case 26: {
+                if (tam == 0) {
+                    printf("A lista sequencial esta vazia!\n");
+                    break;
+                }
+                int cn = 0, mn = 0;
+                clock_t inicio_seq = clock();
+                shellSortSequencial(dados, tam, &mn, &cn);
+                clock_t fim_seq = clock();
+                double tempo_seq = (double)(fim_seq - inicio_seq) / CLOCKS_PER_SEC;
+                printf("Tempo de execucao foi: %.6f\n", tempo_seq);
+                printf("mn: %d cn: %d\n",mn,cn);
+            }break;
+            case 27: {
+                if (tam == 0) {
+                    printf("A lista sequencial esta vazia!\n");
+                    break;
+                }
+                int cn, mn;
+                clock_t inicio_seq = clock();
+                quickSortSequencial(dados, tam, &cn, &mn);
+                clock_t fim_seq = clock();
+                double tempo_seq = (double)(fim_seq - inicio_seq) / CLOCKS_PER_SEC;
+                printf("Tempo de execucao foi: %.6f\n", tempo_seq);
+                printf("mn: %d cn: %d\n",mn,cn);
+            }break;
+            case 28: {
+                if (tam == 0) {
+                    printf("A lista sequencial esta vazia!\n");
+                    break;
+                }
+                int cn, mn;
+                clock_t inicio_seq = clock();
+                mergeSortSequencial(dados, tam, &cn, &mn);
+                clock_t fim_seq = clock();
+                double tempo_seq = (double)(fim_seq - inicio_seq) / CLOCKS_PER_SEC;
+                printf("Tempo de execucao foi: %.6f\n", tempo_seq);
+                printf("mn: %d cn: %d\n",mn,cn);
+
+            }break;
+            case 29: {
+                if (tam == 0) {
+                    printf("A lista sequencial esta vazia! Carregue e ordene os dados primeiro.\n");
+                    break;
+                }
+
+                int rg_desejado;
+                int cn = 0, mn = 0;
+
+                printf("Digite o RG que deseja buscar (Busca Binaria): \n");
+                scanf("%d", &rg_desejado);
+                while (getchar() != '\n');
+
+                clock_t inicio = clock();
+                int posicao = buscaBinariaSequencial(dados, tam, rg_desejado, &cn, &mn);
+                clock_t fim = clock();
+
+                double tempo = (double)(fim - inicio) / CLOCKS_PER_SEC;
+
+                printf("\n==================================================\n");
+                printf("       BUSCA BINARIA (SEQUENCIAL)\n");
+                printf("==================================================\n");
+
+                if (posicao != -1) {
+                    printf("-> RG ENCONTRADO!\n");
+                    printf("-> Nome: %s\n", dados[posicao].name);
+                    printf("-> Posicao no Vetor: %d\n", posicao);
+                } else {
+                    printf("-> O RG %d NAO foi encontrado.\n", rg_desejado);
+                }
+
+                printf("\nTempo de execucao : %.6f segundos\n", tempo);
+                printf("Comparacoes C(n)  : %d\n", cn);
+                printf("==================================================\n");
+                printf("AVISO: A Busca Binaria so e valida se a lista estiver ORDENADA pelo RG.\n");
+            } break;
+            case 30: {
+                if (tam == 0) {
+                    printf("A lista sequencial esta vazia!\n");
+                    break;
+                }
+                int cn, mn;
+                estaOrdenadoSequencial(dados, tam);
+            }break;
             case 167: {
                 continuar = false;
             }

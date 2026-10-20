@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <math.h>
 
 #define BUFLEN 50
 #define MAX_NAME 50
@@ -53,5 +54,19 @@ void liberarListaEncadeada(ListaEncadeada* lista);
 
 void selectionSortEncadeada(ListaEncadeada* lista, int* cn, int* mn);
 void selectionSortSequencial(Dados* dados, int tam, int* cn, int* mn);
+
+void insertionSortSequencial(Dados* dados, int tam, int *cn, int *mn);
+
+void bubbleSortSequencial(Dados* dados, int tam, int *cn , int*mn);
+
+void shellSortSequencial(Dados* dados, int tam, int* mn, int* cn);
+
+void estaOrdenadoSequencial(Dados* dados,int tam);
+
+void quickSortSequencial(Dados* dados, int tam, int* cn, int* mn);
+
+void mergeSortSequencial(Dados* dados, int tam, int* cn, int* mn);
+
+int buscaBinariaSequencial(Dados* dados, int tam, int rgBuscado, int* cn, int* mn);
 
 #endif

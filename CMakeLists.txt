@@ -26,4 +26,11 @@ add_executable(ED1 main.c
         freeMemoryEncadeada.c
         selectionSortSequencial.c
         selectionSortEncadeada.c
+        insertionSortSequencial.c
+        bubbleSortSequencial.c
+        shellSortSequencial.c
+        estaOrdenadoSequencial.c
+        quickSortSequencial.c
+        mergeSortSequencial.c
+        buscaBinariaSequencial.c
 )
