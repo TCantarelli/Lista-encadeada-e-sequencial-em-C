@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void salvarListaSequencial(Dados* dados, int tam, char nomeArquivo[]) {
     FILE* arquivo = fopen(nomeArquivo, "w");
     if (arquivo == NULL) {

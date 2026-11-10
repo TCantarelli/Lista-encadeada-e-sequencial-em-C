@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void pesquisaEncadeada(ListaEncadeada* lista, int rg_desejado, int* cn, int* mn)
 {
     No* atual = lista->inicio;

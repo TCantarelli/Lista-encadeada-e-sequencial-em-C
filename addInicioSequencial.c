@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void addInicioSequencial(Dados** dados, int* tam, char new_name[], int new_rg, int* cn, int* mn) {
     *cn = 0;
     *mn = 0;

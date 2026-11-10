@@ -1,4 +1,8 @@
 #include "declarations.h"
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void readFile(char fileName[], ListaEncadeada* lista) {
 
     FILE *arquivo = fopen(fileName, "r");

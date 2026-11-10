@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void salvarListaEncadeada(ListaEncadeada* lista, char nomeArquivo[]) {
     FILE* arquivo = fopen(nomeArquivo, "w");
     if (arquivo == NULL) {

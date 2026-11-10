@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void selectionSortEncadeada(ListaEncadeada* lista, int* cn, int* mn) {
     *cn = 0;
     *mn = 0;

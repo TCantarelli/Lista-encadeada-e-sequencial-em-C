@@ -1,6 +1,9 @@
 #ifndef ED1_DECLARATIONS_H
 #define ED1_DECLARATIONS_H
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
@@ -68,5 +71,7 @@ void quickSortSequencial(Dados* dados, int tam, int* cn, int* mn);
 void mergeSortSequencial(Dados* dados, int tam, int* cn, int* mn);
 
 int buscaBinariaSequencial(Dados* dados, int tam, int rgBuscado, int* cn, int* mn);
+
+void inverterListaSequencial(Dados* dados, int tam);
 
 #endif

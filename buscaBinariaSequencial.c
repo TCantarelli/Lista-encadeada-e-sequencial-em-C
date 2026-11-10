@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 int buscaBinariaSequencial(Dados* dados, int tam, int rgBuscado, int* cn, int* mn) {
     *cn = 0;
     *mn = 0;

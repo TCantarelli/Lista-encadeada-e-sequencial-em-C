@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void pesquisaSimples(Dados* dados, int rg_desejado, int tam, int* cn, int* mn)
 {
     *cn = 0;

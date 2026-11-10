@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void quickSortSequencial(Dados* dados, int tam, int* cn, int* mn) {
     if (tam <= 1) {
         return;

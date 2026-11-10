@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 int main () {
 
     ListaEncadeada listaEnc;
@@ -639,7 +642,7 @@ int main () {
                 mergeSortSequencial(dados, tam, &cn, &mn);
                 clock_t fim_seq = clock();
                 double tempo_seq = (double)(fim_seq - inicio_seq) / CLOCKS_PER_SEC;
-                printf("Tempo de execucao foi: %.6f\n", tempo_seq);
+                printf("Tempo de execucao foi: %.6f segundos\n", tempo_seq);
                 printf("mn: %d cn: %d\n",mn,cn);
 
             }break;
@@ -686,6 +689,14 @@ int main () {
                 }
                 int cn, mn;
                 estaOrdenadoSequencial(dados, tam);
+            }break;
+            case 31: {
+                if (tam == 0) {
+                    printf("A lista sequencial esta vazia!\n");
+                    break;
+                }
+                inverterListaSequencial(dados, tam);
+                printf("Lista invertida com sucesso!");
             }break;
             case 167: {
                 continuar = false;

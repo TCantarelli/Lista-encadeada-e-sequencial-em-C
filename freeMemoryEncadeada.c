@@ -1,4 +1,8 @@
 #include "declarations.h"
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void liberarListaEncadeada(ListaEncadeada* lista) {
     if (lista == NULL)
         return;

@@ -33,4 +33,5 @@ add_executable(ED1 main.c
         quickSortSequencial.c
         mergeSortSequencial.c
         buscaBinariaSequencial.c
+        inverterListaSequencial.c
 )

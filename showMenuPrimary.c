@@ -1,5 +1,8 @@
 #include "declarations.h"
-
+/**
+ *
+ * By : Thiago Cantarelli Pereira da Silva RA: 2884020
+ */
 void showMenuPrimary() {
     printf(
         "\n"
@@ -38,7 +41,7 @@ void showMenuPrimary() {
         " |  30. Verificar (Sequencial) : A lista esta ordenada?                                     |\n"
         " +==========================================================================================+\n"
         " | [ CONTROLE DO SISTEMA ]                                                                  |\n"
-        " |  22. Limpar as duas estruturas, formatar dados e liberar memoria alocada (free)          |\n"
+        " |  22. Liberar memoria  (Free)                                                             |\n"
         " | 167. Encerrar Aplicacao                                                                  |\n"
         " +==========================================================================================+\n"
         " \n >> Digite o numero da operacao desejada e pressione ENTER: "
